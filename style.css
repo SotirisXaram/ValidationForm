@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+:root{
+    --succes-color:green;
+    --error-colour:red;
+}
+body{
+    display: flex;
+    min-height: 80vh;
+    font-family: sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+}
+.form{
+    padding: 30px 40px;
+}
+h2{
+    text-align: center;
+}
+
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.form-control label{
+    color: gray;
+    display: block;
+    margin-bottom: 5px;
+}
+.form-control input{
+    border: 2px solid rgb(163, 157, 157);
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    
+}
+.form-control.error input{    
+    border-color: red;
+    
+}
+.form-control.error small{
+    visibility: visible;
+    color: var(--error-colour);
+}
+
+
+.form-control.succes input{
+    border-color: var(--succes-color)
+}
+
+.form-control input:focus{
+    outline: 0;
+   
+}
+.form-control small{
+    visibility: hidden;
+}
+#btn{
+    width: 100%;
+    background-color: rgb(53, 135, 135);
+    height: 25px;
+}
